@@ -5,9 +5,28 @@ public class Human {
     public String speciality;
 
     public Human(int age, String name, String city, String speciality) {
-        this.age = age;
-        this.name = name;
-        this.city = city;
-        this.speciality = speciality;
+        if (age < 0) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
+
+        if (name == null) {
+            this.name = "Информация не указана";
+        } else {
+            this.name = name;
+        }
+
+        if (city == null) {
+            this.city = "Информация не указана";
+        } else {
+            this.city = city;
+        }
+
+        if (speciality == null) {
+            this.speciality = "Информация не указана";
+        } else {
+            this.speciality = speciality;
+        }
     }
 }
